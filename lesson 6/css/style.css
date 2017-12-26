@@ -1,0 +1,18 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+#tictactoe{
+	width: 360px;
+	height: 360px;
+	margin: 0 auto;
+	border: 1px dotted #444;
+}
+
+.field_part{
+	width: 32.9%;
+	height: 33%;
+	float: left;
+	border: 1px dashed black;
+}

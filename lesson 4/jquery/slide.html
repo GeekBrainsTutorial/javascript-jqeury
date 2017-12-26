@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<style type="text/css">
+body {
+	margin: 0 auto;
+	padding: 0;
+	width: 570px;
+	font: 75%/120% Arial, Helvetica, sans-serif;
+}
+a:focus {
+	outline: none;
+}
+#panel {
+	background: #754c24;
+	height: 200px;
+	display: none;
+}
+.slide {
+	margin: 0;
+	padding: 0;
+	border-top: solid 4px #422410;
+}
+.btn-slide {
+	background: orange;
+	text-align: center;
+	width: 144px;
+	height: 31px;
+	padding: 10px 10px 0 0;
+	margin: 0 auto;
+	display: block;
+	font: bold 120%/100% Arial, Helvetica, sans-serif;
+	color: #fff;
+	text-decoration: none;
+}
+.active {
+	background: green;
+}
+</style>
+<script>
+	(function($) {
+		$(function() {
+			$(document).on('click', '#slide', function(event) {
+				$('#panel').slideToggle(5000);
+				$(this).toggleClass('active');
+				event.preventDefault();
+			});
+		});
+	})(jQuery);
+</script>
+<body>
+	<div id="panel"></div>
+	<p class="slide"><a href="#" id="slide" class="btn-slide">Slide panel</a></p>
+</body>
+</html>
